@@ -1,0 +1,40 @@
+From: Thorsten Glaser <tg@mirbsd.de>
+Date: Wed, 26 Apr 2017 22:02:38 +0200
+Subject: Detect x32, handle as non-x86 and no-ASM for now, but enable PIC
+
+---
+ source/CMakeLists.txt | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/source/CMakeLists.txt b/source/CMakeLists.txt
+index 25aecbb..b46de51 100644
+--- a/source/CMakeLists.txt
++++ b/source/CMakeLists.txt
+@@ -50,6 +50,9 @@ if("${SYSPROC}" STREQUAL "" OR X86MATCH GREATER "-1")
+     add_definitions(-DX265_ARCH_X86=1)
+     if(CMAKE_CXX_FLAGS STREQUAL "-m32")
+         message(STATUS "Detected x86 target processor")
++    elseif(CMAKE_LIBRARY_ARCHITECTURE STREQUAL "x86_64-linux-gnux32")
++        message(STATUS "Detected x32 target system")
++        set(X32 1)
+     elseif("${CMAKE_SIZEOF_VOID_P}" MATCHES 8)
+         set(X64 1)
+         add_definitions(-DX86_64=1)
+@@ -118,6 +121,8 @@ endif(UNIX)
+ 
+ if(X64 AND NOT WIN32)
+     option(ENABLE_PIC "Enable Position Independent Code" ON)
++elseif(X32)
++    option(ENABLE_PIC "Enable Position Independent Code" ON)
+ else()
+     option(ENABLE_PIC "Enable Position Independent Code" OFF)
+ endif(X64 AND NOT WIN32)
+@@ -217,7 +222,7 @@ if(GCC)
+         else()
+             add_definitions(-march=native)
+         endif()
+-    elseif(X86 AND NOT X64)
++    elseif(X86 AND NOT X64 AND NOT X32)
+         string(FIND "${CMAKE_CXX_FLAGS}" "-march" marchPos)
+         if(marchPos LESS "0")
+             add_definitions(-march=i686)

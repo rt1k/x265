@@ -1,0 +1,13 @@
+#!/bin/sh
+# autopkgtest check: Use ffmpeg to produce a 10s test image,
+# and use x265 to encode to H.265/HEVC
+
+set -e
+
+cd "$AUTOPKGTEST_TMP"
+
+ffmpeg -y -filter_complex testsrc -t 10 -pix_fmt yuv420p in.y4m
+x265 -o out.raw in.y4m
+ffprobe -of ini -show_streams out.raw | tee avprobe.txt
+grep "^codec_name=hevc" avprobe.txt
+grep "^codec_long_name=H.265" avprobe.txt

@@ -1,0 +1,6 @@
+CREATE debian/tmp/usr/lib/@DEB_HOST_MULTIARCH@/libx265.a
+ADDLIB x265-8bit/libx265.a
+ADDLIB x265-10bit/libx265_main10.a
+ADDLIB x265-12bit/libx265_main12.a
+SAVE
+END

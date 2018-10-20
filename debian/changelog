@@ -1,0 +1,401 @@
+x265 (2.9-3) unstable; urgency=medium
+
+  * debian/patches: Define detect512 on every architecture. (Closes: #910963)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 14 Oct 2018 14:06:00 +0200
+
+x265 (2.9-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 13 Oct 2018 12:55:25 +0200
+
+x265 (2.9-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: 160 -> 165.
+  * debian/patches: Drop patches included upstream.
+  * debian/libx265-165.symbols:
+    - Add missing symbols.
+    - Be more specific when marking symbols as optional.
+    - Add Build-Depends-Package.
+  * debian/control: Bump Standards-Version.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 09 Oct 2018 23:51:13 +0200
+
+x265 (2.8-4) unstable; urgency=medium
+
+  * debian/rules: Fix generation of combined static libraries. (LP: #1777875)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 24 Jun 2018 13:35:38 +0200
+
+x265 (2.8-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 12 Jun 2018 09:40:47 +0200
+
+x265 (2.8-2) experimental; urgency=medium
+
+  * debian/patches: Apply upstream patch to fix build on non-x86
+    architectures.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 11 Jun 2018 21:24:20 +0200
+
+x265 (2.8-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: 151 -> 160.
+  * debian/rules: Install upstream changelog.
+  * debian/patches: Refresh patches.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 27 May 2018 22:28:12 +0200
+
+x265 (2.7-3) unstable; urgency=medium
+
+  * debian/libx265-doc.doc-base: Fix paths.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 20 May 2018 14:03:43 +0200
+
+x265 (2.7-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 28 Apr 2018 15:26:41 +0200
+
+x265 (2.7-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/copyright: Use https protocol in Format field
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Felipe Sateler ]
+  * Change maintainer address to debian-multimedia@lists.debian.org
+
+  [ Jonathon Fernyhough ]
+  * New upstream release.
+  * SONAME bump: 146 -> 151.
+  * debian/control: switch from yasm to nasm.
+  * Drop patch 0003-Fix-possible-NULL-pointer, included upstream.
+
+  [ Sebastian Ramacher ]
+  * debian/control:
+    - Bump Standards-Version. No changes required.
+    - Bump nasm version to match cmake check.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 17 Apr 2018 20:15:38 +0200
+
+x265 (2.6-3) unstable; urgency=medium
+
+  * debian/patches: Fix possible NULL pointer in cudata init. (CVE-2017-13135)
+  * debian/control: Bump Standards-Version.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 31 Dec 2017 13:14:43 +0100
+
+x265 (2.6-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 06 Dec 2017 23:56:19 +0100
+
+x265 (2.6-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: 130 -> 146.
+  * debian/control: Bump Standards-Version.
+  * debian/copyright: Update copyright info.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 03 Dec 2017 21:20:48 +0100
+
+x265 (2.5-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * debian/control: Bump Standards-Version.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 15 Aug 2017 20:08:02 +0200
+
+x265 (2.5-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: 116 -> 130.
+  * debian/patches: Refresh.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 19 Jul 2017 20:03:28 +0200
+
+x265 (2.4-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * debian/control:
+    - Bump Standards-Version. Support for DEB_BUILD_OPTIONS=nodoc is deferred
+      until debhelper supports it (#865707).
+    - Use Python3 version of sphinx.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 26 Jun 2017 18:27:41 +0200
+
+x265 (2.4-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: 110 -> 116.
+  * debian/patches: Refresh.
+  * debian/copyright: Regenerate using decopy.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 26 Apr 2017 22:29:34 +0200
+
+x265 (2.3-2) experimental; urgency=medium
+
+  * debian/copyright: Add missing paragraphs for some undocumented files.
+    (Closes: #855478)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 23 Feb 2017 16:57:15 +0100
+
+x265 (2.3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-102 -> libx265-110.
+  * debian/rules: Disable AltiVec support on ppc64* for 10 and 12 bit builds.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 18 Feb 2017 00:34:35 +0100
+
+x265 (2.2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-95 -> libx265-102.
+  * debian/rules: No longer disable PIE.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 29 Dec 2016 14:17:49 +0100
+
+x265 (2.1-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 05 Oct 2016 23:57:29 +0200
+
+x265 (2.1-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-87 -> libx265-95.
+  * debian/libx265-95.symbols: Re-add symbols for x265_api_get and
+    x265_encoder_open.
+  * debian/{rules,control,compat}: Bump debhelper compat to 10.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 01 Oct 2016 09:53:23 +0200
+
+x265 (2.0-4) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 31 Aug 2016 21:54:39 +0200
+
+x265 (2.0-3) experimental; urgency=medium
+
+  * debian/{control,rules,patches/compile-flags.patch}: Completely disable
+    asm support on arm* until we find a way to build everything correctly.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 20 Aug 2016 16:35:59 +0200
+
+x265 (2.0-2) experimental; urgency=medium
+
+  * debian/{control,rules,patches/compile-flags.patch}: Build only 8 bit
+    flavor with yasm enabled on armel and armhf. Also set features via
+    configure options instead of auto-detecting them.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 18 Aug 2016 22:27:01 +0200
+
+x265 (2.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * New upstream release
+  * SONAME bump: libx265-79 -> libx265-87.
+  * Build with hardening=+all,-pie.
+  * Add autopkgtest.
+
+  [ Sebastian Ramacher ]
+  * debian/copyright: Update copyright years.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 16 Aug 2016 21:17:29 +0200
+
+x265 (1.9-3) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 11 Feb 2016 09:31:40 +0100
+
+x265 (1.9-2) experimental; urgency=medium
+
+  * debian/libx265-79.symbols: Add missing symbols.
+  * debian/control: Restrict yasm in B-D to amd64 and kfreebsd-amd64 again.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 08 Feb 2016 02:08:37 +0100
+
+x265 (1.9-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-68 -> libx265-79.
+  * debian/control:
+    - Bump Standards-Version.
+    - Update Vcs-*.
+    - Fix typos in Description.
+  * debian/copyright: Update years.
+  * debian/rules: Remove unnecessary dh_strip override.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 06 Feb 2016 22:01:19 +0100
+
+x265 (1.8-6) unstable; urgency=medium
+
+  * Move to automatic debug symbol packages.
+    - debian/control:
+      + B-D on debhelper >= 9.20151219
+      + Remove libx265-68-dbg.
+    - debian/rules: Run dh_strip with --ddeb-migration.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 20 Dec 2015 20:36:53 +0100
+
+x265 (1.8-5) unstable; urgency=medium
+
+  * debian/rules: Do not configure, test and install arch bits when building
+    indep. (Closes: #806877)
+  * debian/control: Enable numa support on mips64 and mipsel64. (Closes:
+    #806712)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Fri, 04 Dec 2015 17:58:53 +0100
+
+x265 (1.8-4) unstable; urgency=medium
+
+  * debian/rules: Merge static libraries once cmake is done with them.
+    (Closes: #804376)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 08 Nov 2015 14:34:44 +0100
+
+x265 (1.8-3) unstable; urgency=medium
+
+  * debian/patches
+    - fix-linking-with-dl.patch: Fix linking with dl. (Closes: #802093)
+    - fix-version-info.patch: Fix version info. (Closes: #802092)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 20 Oct 2015 20:59:03 +0200
+
+x265 (1.8-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 14 Oct 2015 19:35:36 +0200
+
+x265 (1.8-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-59 -> libx265-68.
+  * Create multilib build as recommended upstream:
+    - debian/rules: Build static versions of 10 bit and 12 bit builds and link
+      them into the 8 bit build.
+    - debian/patches/highbit-depth-path.patch: Removed, no longer needed.
+    - debian/libx265-*.install: No longer install 10 bit build separately.
+  * debian/patches: Refresh patches.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Mon, 12 Oct 2015 01:56:09 +0200
+
+x265 (1.7-4) unstable; urgency=low
+
+  [ Thorsten Glaser ]
+  * Fix building on x32 (without asm, for now) (Closes: #792272)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 19 Jul 2015 13:19:23 +0200
+
+x265 (1.7-3) unstable; urgency=medium
+
+  * debian/rules: Filter -Wl,-Bsymbolic-functions. (Closes: #789111)
+  * debian/patches/gcc-check.patch: Apply upstream fix to gcc feature
+    detection.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Fri, 19 Jun 2015 15:36:04 +0200
+
+x265 (1.7-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 23 May 2015 14:54:14 +0200
+
+x265 (1.7-1) experimental; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-51 -> libx265-59.
+  * debian/patches:
+    - compile-flags.patch: Refreshed.
+    - highbit-depth-path.patch: Use correct path to lookup 10-bit library.
+  * Remove x265-10bit wrapper script. x265 now supports loading the encoder
+    for a different bit depth itself.
+    - debian/{rules,x265.install,x265.manpages}: Do not build and install
+      x265-10bit wrapper script.
+    - debian/x26510bit.{in,1}: Removed.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 21 May 2015 22:40:21 +0200
+
+x265 (1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * SONAME bump: libx265-43 -> libx265-51.
+  * debian/patches:
+    - compile-flags.patch: Refreshed.
+    - workaround-partial-SIMD-support.patch, hide-internal-symbol.patch:
+      Removed, no longer needed.
+  * debian/control: Add libnuma-dev to B-D to build with libnuma support.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Tue, 07 Apr 2015 23:09:39 +0200
+
+x265 (1.5-1) unstable; urgency=medium
+
+  * New upstream release.
+    - Fix bit depth check in CLI. (Closes: #775181)
+  * SONAME bump: libx265-35 -> libx265-43.
+  * debian/patches:
+    - atomic.patch: Removed, no longer needed.
+    - compile-flags.patch, workaround-partial-SIMD-support.patch: Refreshed.
+    - hide-internal-symbol.patch: Hide an internal symbol.
+  * debian/rules: Build with ENABLE_PIC=ON.
+  * debian/copyright: Update copyright years.
+  * debian/x265-10bit.1: Fix error in man page.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Wed, 18 Feb 2015 01:54:07 +0100
+
+x265 (1.4-5) unstable; urgency=medium
+
+  * Also build 10 bit variant:
+    - debian/rules: Build both 8 and 10 bit libraries.
+    - debian/*.install: Install 10 bit libraries.
+    - debian/x265-10bit.{in,1}: Wrapper script to load 10 bit libraries.
+  * debian/x265: Fix header.
+  * debian/control: Fix typo in libx265-dev's Suggests.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Fri, 26 Dec 2014 20:23:34 +0100
+
+x265 (1.4-4) unstable; urgency=medium
+
+  * debian/patches/atomic.patch: Fix a "typo": it's OR and not or.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Fri, 05 Dec 2014 22:55:44 +0100
+
+x265 (1.4-3) unstable; urgency=medium
+
+  * debian/patches:
+    - atomic.patch: Use functions from atomic instead of builtins on mips,
+      mipsel and powerpc. Thanks to Dejan Latinovi for the patch. (Closes:
+      #771556)
+    - workaround-partial-SIMD-support.patch: Upstream patch to fix build
+      issues if yasm is not available on i386.
+  * debian/rules: Enable LFS support.
+  * debian/control: Do not B-D on yasm on any-i386 until the build system
+    produces PIC code.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Fri, 05 Dec 2014 20:55:36 +0100
+
+x265 (1.4-2) unstable; urgency=medium
+
+  * debian/patches/compile-flags.patch: Build with -fPIC everywhere and remove
+    architecture specific compile flags that do not match our defaults.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sun, 30 Nov 2014 17:55:25 +0100
+
+x265 (1.4-1) unstable; urgency=medium
+
+  * Initial release. (Closes: #750817)
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Sat, 29 Nov 2014 21:50:08 +0100

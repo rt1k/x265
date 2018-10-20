@@ -1,0 +1,3 @@
+0001-Fix-arm-flags.patch
+0002-Detect-x32-handle-as-non-x86-and-no-ASM-for-now-but-.patch
+0003-detect512-is-needed-on-all-architectures.patch

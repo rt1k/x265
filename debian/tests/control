@@ -1,0 +1,3 @@
+Tests: encode-testimage
+Depends: ffmpeg, x265
+Restrictions: allow-stderr

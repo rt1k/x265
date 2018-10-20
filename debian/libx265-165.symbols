@@ -1,0 +1,41 @@
+libx265.so.165 libx265-165 #MINVER#
+| libx265-165 (>= 2.9), libx265-165 (<< 2.10)
+* Build-Depends-Package: libx265-dev
+ x265_alloc_analysis_data@Base 2.9
+ x265_api_get_165@Base 2.9
+ x265_api_query@Base 1.8
+ x265_build_info_str@Base 1.4
+ x265_cleanup@Base 1.4
+ x265_csvlog_encode@Base 2.6
+ x265_csvlog_frame@Base 2.6
+ x265_csvlog_open@Base 2.6
+ x265_dither_image@Base 2.6
+ x265_encoder_close@Base 1.4
+ x265_encoder_ctu_info@Base 2.5
+ x265_encoder_encode@Base 1.4
+ x265_encoder_get_stats@Base 1.4
+ x265_encoder_headers@Base 1.4
+ x265_encoder_intra_refresh@Base 1.9
+ x265_encoder_log@Base 1.4
+ x265_encoder_open_165@Base 2.9
+ x265_encoder_parameters@Base 1.4
+ x265_encoder_reconfig@Base 1.7
+ x265_free_analysis_data@Base 2.9
+ x265_get_ref_frame_list@Base 2.6
+ x265_get_slicetype_poc_and_scenecut@Base 2.6
+ x265_max_bit_depth@Base 1.4
+ x265_param_alloc@Base 1.4
+ x265_param_apply_profile@Base 1.4
+ x265_param_default@Base 1.4
+ x265_param_default_preset@Base 1.4
+ x265_param_free@Base 1.4
+ x265_param_parse@Base 1.4
+ x265_picture_alloc@Base 1.4
+ x265_picture_free@Base 1.4
+ x265_picture_init@Base 1.4
+ x265_set_analysis_data@Base 2.6
+ x265_version_str@Base 1.4
+ (optional)x265_entropyStateBits@Base 0 1
+ (optional)x265_intel_cpu_indicator_init@Base 0 1
+ (regex|optional)"^x265_(10|12)bit_.*@Base$" 0 1
+ (regex|c++|optional)"^.*@Base$" 0 1
