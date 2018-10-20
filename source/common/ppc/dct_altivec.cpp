@@ -30,6 +30,14 @@
 
 using namespace X265_NS;
 
+#ifndef vec_xl
+#define vec_xl vec_ld
+#endif
+
+#ifndef vec_xst
+#define vec_xst vec_st
+#endif
+
 static uint32_t quant_altivec(const int16_t* coef, const int32_t* quantCoeff, int32_t* deltaU, int16_t* qCoef, int qBits, int add, int numCoeff)
 {
 

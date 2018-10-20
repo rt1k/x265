@@ -29,6 +29,14 @@
 
 using namespace X265_NS;
 
+#ifndef vec_xl
+#define vec_xl vec_ld
+#endif
+
+#ifndef vec_xst
+#define vec_xst vec_st
+#endif
+
 // ORIGINAL : for(col=0; col<16; col++) {sum[col]  = src[ocol+col + 0 * srcStride] * c[0];}
 #define multiply_pixel_coeff(/*vector int*/ v_sum_0, /*vector int*/ v_sum_1, /*vector int*/ v_sum_2, /*vector int*/ v_sum_3, /*const pixel * */ src, /*int*/ src_offset, /*vector signed short*/ v_coeff) \
 { \

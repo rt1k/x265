@@ -77,6 +77,11 @@ typedef uint32_t sum2_t ;
 typedef uint16_t sum_t ;
 #define BITS_PER_SUM (8 * sizeof(sum_t))
 
+#ifndef vec_xl
+#define vec_xl vec_ld
+#endif
+
+
 /***********************************************************************
  * SAD routines - altivec implementation
  **********************************************************************/

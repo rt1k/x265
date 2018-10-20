@@ -449,7 +449,7 @@ if(POWER)
         add_definitions(-DHAVE_ALTIVEC=0)
     endif()
 
-    option(CPU_POWER8 "Enable CPU POWER8 profiling instrumentation" ON)
+    option(CPU_POWER8 "Enable CPU POWER8 profiling instrumentation" OFF)
     if(CPU_POWER8)
         add_definitions(-mcpu=power8 -DX265_ARCH_POWER8=1)
     endif()

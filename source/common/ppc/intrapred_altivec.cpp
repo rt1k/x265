@@ -39,6 +39,14 @@
 #include "x265.h"
 #include "ppccommon.h"
 
+#ifndef vec_xl
+#define vec_xl vec_ld
+#endif
+
+#ifndef vec_xst
+#define vec_xst vec_st
+#endif
+
 //using namespace std ;
 namespace X265_NS {
 
